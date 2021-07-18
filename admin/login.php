@@ -56,53 +56,67 @@
 ?>
 
 
-<div class="container mt-3">
+
+<div class="container">
+
+<div class="row">
+
+   <div class="col-sm-4">
+   
+   </div>
+ 
+   <div class="col-sm-4">
+     <br><br>
 
 
-<div class="login-section text-white bg-dark p-5" id="login">
+     <div class="title text-center mb-3">
+      <h3 class="font-weight-bolder">Admin Login Panel</h3>
+     <span class="text-danger"> <?php echo $error;?></span>
+    </div>
 
+   <br><br><br>
 
-<div class="title text-center mb-3">
-  <h3 class="font-weight-bolder">Admin Login Panel</h3>
-  <span class="text-danger"> <?php echo $error;?></span>
-</div>
+   <form  id = "form" method ="post" action="">
+   
+   <div class="form-group">
+   
+   <i class="fa fa-envelope"></i><label for="email">&nbsp;&nbsp; Username</label>
+   <input type="text" value=""  id ="username" class="form-control" placeholder="Enter Your User Name"  name="username" required>
+   <!--<span id="email-e"> </span>-->
+   <span class="text-danger"> <?php echo $username_err ;?></span>
+ 
+   </div>
 
-
-<form method = "post" action="" class="w-50 m-auto">
-
-  <div class="from-group">
-     
-    <label for="username">User Name</label>
-    <input type="text" class="form-control" name="username">
-    <span class="text-danger"> <?php echo $username_err;?></span>
+   <div class="form-group">
+   
+   <i class="fas fa-unlock-alt"></i><label for="password">&nbsp;&nbsp; Password</label>
+   <input type="password" id="password" class="form-control" placeholder="Enter Your Password"  name="password" required>
+ <!--  <span id="password-p"> </span>-->
+ <span class="text-danger"> <?php echo $password_err;?></span>
+ 
+   </div>
 
    
+  
+   <br><br>
 
-  </div>
+   <div class="form-group">
+   <input type="submit" style = "width:100%"  name="submit" id ="submitbtn" class="form-control btn btn-success" value="Login"> 
+   </div>
 
-  <div class="from-group">
 
-    <label for="password">password</label>
-    <input type="password" class="form-control" name="password">
-    <span class="text-danger"> <?php echo $password_err;?></span>
+  
 
+ </form>
+   
+   </div>
+
+   <div class="col-sm-4"></div>
     
-  </div>
-
-
-
-  <div class="form-group mt-3">
-
-   <input type="submit" name="submit" class= "btn btn-secondary" value="Login">
-   
-                  
-  </div>
-   
-</form>
-
-
 
 </div>
+
+
 </div>
 
 <?php
