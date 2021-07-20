@@ -6,9 +6,10 @@
 	        <title>admin</title>
 	        <link rel = "shortcut icon" type="image" href="images/bookLogo.png"/>	
 			
-			<link rel = "stylesheet" href="style.css"/>	
-
-            
+         
+          <link rel = "stylesheet" href="profile.css"/>	
+        	
+          <link rel = "stylesheet" href="style.css"/>	   
      <!--font awsome-->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous"/>
 
@@ -16,73 +17,94 @@
       <!---bootstrapt cdn--->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">	
 			
+
+
+
 				<style>
 	
 	            </style>
 			<meta charset = "UTF-8">
             <meta name="viewport" content="width = device-width , initial-scale = 1.0">
             <meta http-equiv="X-UA-compatible" >
+
+            <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 		
 	 </head>
 	
 	 <body>
 
-     <div class="container-fluid">
-
-     <nav class="navbar navbar-expand-md">
-                   
-                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                     <span><i class="fas fa-bars navbar-icon"></i></span>
-                   </button>
-
-                   <a class="navbar-brand" href="profile.php">
-                         <img src="images/bookLogo.png" alt="logo">
-                         <!--https://i.pinimg.com/originals/2a/48/ca/2a48cae52a31e76376d82ba4bb32824a.png-->
-                   </a>
-
-
-                   <div class="collapse navbar-collapse"  id="navbarNavDropdown">
-                     <ul class="navbar-nav ml-auto">
-
+  
                      <?php
                      session_start();
                      
                        if(!isset($_SESSION['aloggedin'])){
 
                           echo'
-                          <li class="nav-item active">
-                          <a class="nav-link text-center text-md-left" href="login.php">Login</a>
-                         </li>' ;
+                          
+                         <nav class="navbar navbar-expand-md">
+                            <li class="nav-item active">
+                            <a class="nav-link text-center text-md-left" href="login.php">Login</a>
+                            </li>
+                     
+                          </nav> ';
                            
                        }else{
-
-                        echo'
-                        <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        My Account
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <h3>Hello,Admin</h3>
-                         <div class="divider"></div>
-                        <a class="font-weight-bolder dropdown-item" href="logout.php">logout</a>
+                        
+ 
+                         echo'
+                         <div class="btn">
+                         <span class="fas fa-bars"></span>
                         </div>
-                       </li> ';
+                      <nav class="sidebar">
+                         <div class="text">
+                            Side Menu
+                         </div>
+                         <ul>
+                            <li class="active"><a href="#">Dashboard</a></li>
+                            <li>
+                               <a href="#" class="feat-btn">Manage Route
+                               <span class="fas fa-caret-down first"></span>
+                               </a>
+                               <ul class="feat-show">
+                                  <li><a href="#">Add new Route</a></li>
+                                  <li><a href="#">Edit Route</a></li>
+                               </ul>
+                            </li>
+                            <li>
+                               <a href="#" class="serv-btn">Manage Bus
+                               <span class="fas fa-caret-down second"></span>
+                               </a>
+                               <ul class="serv-show">
+                                  <li><a href="#">Add new bus schedule</a></li>
+                                  <li><a href="#">View bus schedule</a></li>
+                                  <li><a href="#">Booking</a></li>
+                               </ul>
+                            </li>
+                            <li><a href="#">Bus Ticket Info</a></li>
+                            <li><a href="#">Pending Tickets</a></li>
+                            
+                           <li><a href="logout.php">Logout</a></li>
+                         </ul>
+                      </nav>
+                      <div class="content">
+                         <div class="header">
+                            Welcome to the admin panel arena!
+                         </div>
+                         <p>
+                            Path-Way E-Tieketing Services
+                         </p>
+                      </div> ';
+                         
+  
+                    
 
                        }
 
         
                      ?>
                            
-                     </ul>
-                   </div>
-                 </nav>
-                 
 
-     </div>       
-
-     
-
-			
 
 
 
