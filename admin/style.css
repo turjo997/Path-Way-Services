@@ -1,3 +1,4 @@
+
 .navbar{
 
     padding: 1% 10%;
@@ -33,7 +34,6 @@
    color:  blue;
    transform: scale(1.1);
 }
-
 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
@@ -119,17 +119,17 @@ ul{
 
 /*responsive*/
 @media(max-width: 767px){
-	.footer-col{
-	  width: 50%;
-	  margin-bottom: 30px;
-  }
-  }
-  @media(max-width: 574px){
-	.footer-col{
-	  width: 100%;
-  }
-  }
-  
-  
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+
 
 
