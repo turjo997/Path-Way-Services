@@ -5,23 +5,6 @@ include('server.php');
 
 <?php  
 
-/*
-if (isset($_GET['edit'])) {
-    $id = $_GET['edit'];
-    $update = true;
-    $record = mysqli_query($db, "SELECT * FROM route WHERE id=$id");
-
-
-    $res = mysqli_num_rows($record) ;
-
-    if ($res == 1 ) {
-        $n = mysqli_fetch_array($record);
-        $name = $n['name'];
-        
-    }
-}
-*/
-
 
 
 ?>
@@ -34,7 +17,7 @@ if (isset($_GET['edit'])) {
 
 <link rel="stylesheet" type="text/css" href="editstyle.css">
 	<title>admin</title>
-
+	<link rel = "shortcut icon" type="image" href="images/logo1.png"/>
  
  
   <link rel = "stylesheet" href="style.css"/>	   
@@ -122,7 +105,7 @@ if (isset($_GET['edit'])) {
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 			
-		
+		<br><br><br><br><br><br>
 <?php
    require_once 'footer.php';
 ?>
