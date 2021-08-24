@@ -1,20 +1,10 @@
-<?php
-  
-include('server1.php'); 
-?>
-
-<?php  
-
-?>
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
 
 <link rel="stylesheet" type="text/css" href="editstyle.css">
 	<title>admin</title>
+  <link rel = "shortcut icon" type="image" href="images/logo1.png"/>
 
  
  
@@ -41,22 +31,28 @@ include('server1.php');
 	
 </head>
 <body>
+<?php
+  
+//include('server1.php'); 
 
-
-<?php 
+$db = mysqli_connect('localhost', 'root', '', 'path-way services');
 $id = "";
+$results2 ; $results1;
+
+
     if (isset($_GET['seat_view'])) {
         $id = $_GET['seat_view'];
     }
 
-   $results = mysqli_query($db, "SELECT * FROM bus_sch where id=$id");
+   $results1 = mysqli_query($db, "SELECT * FROM bus_sch where id=$id");
+   $results2 = mysqli_query($db, "SELECT * FROM seat_info where bus_id=$id");
 
 ?>
 
+
+
 <div class="container">
    <div class="row">
-
- 
 
 
      <div class="col-lg-2"></div>
@@ -69,12 +65,10 @@ $id = "";
      
     </div>
      
-
-
      <table class="table table-striped table-bordered table-hover table-success text-center">
 	<thead>
 		<tr>
-			<th>Bus_Id</th>
+			      <th>Bus_Id</th>
             <th>Route</th>
             <th>Total seat</th>
             <th>Date</th>
@@ -82,53 +76,55 @@ $id = "";
 		</tr>
 	</thead>
 	
-	<?php while ($row = mysqli_fetch_array($results)) { ?>
+	<?php while ($row1 = mysqli_fetch_array($results1)) { ?>
 		<tr>
-			<td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['route']; ?></td>
-            <td><?php echo $row['seat']; ?></td>
-            <td><?php echo $row['date']; ?></td>
-            <td><?php echo $row['time']; ?></td>
+		     	<td><?php echo $row1['id']; ?></td>
+            <td><?php echo $row1['route']; ?></td>
+            <td><?php echo $row1['seat']; ?></td>
+            <td><?php echo $row1['date']; ?></td>
+            <td><?php echo $row1['time']; ?></td>
 
 		</tr>
 	<?php } ?>
 </table>
 
+<div class="row">
+<div class="col-lg-10">
+      <table class="table table-striped table-bordered table-hover table-dark text-center">
+  <thead>
+    <tr>
+      <th>BusId</th>
+      <th>seat</th>
+      <th>Sold Seat</th>
+      <th>Available Seat</th>
+      <th colspan="4">Action</th>
+    </tr>
+  </thead>
+  
+  <?php while ($row = mysqli_fetch_array($results2)) { ?>
+    <tr>
+            <td><?php echo $row['bus_id']; ?></td>
+            <td><?php echo $row['seat_name']; ?></td>
+            <td><?php echo $row['sold_seat']; ?></td>
+            <td><?php echo $row['available_seat']; ?></td>
+            <td>
+          
+			    	<a href="server2.php?book=<?php      
+            echo $row['id'];?>" class="edit_btn" >Book seat</a>
+    
+			</td>
+		
+            
+    </tr>
+  <?php }?>
+</table>
 
-                                    <a class = "btn btn-outline-primary mb-3" href="#">A1</a> &nbsp;&nbsp;&nbsp;
-                                    <a class = "btn btn-outline-primary mb-3" href="#">A2</a> &nbsp;&nbsp;&nbsp;
-                                    <a class = "btn btn-outline-primary mb-3" href="#">A3</a> &nbsp;&nbsp;&nbsp;
-                                    <a class = "btn btn-outline-primary mb-3" href="#">A4</a> &nbsp;&nbsp;&nbsp;
-
-                                    <br><br>
-                                    <a class = "btn btn-outline-primary mb-3" href="#">B1</a> &nbsp;&nbsp;&nbsp;
-                                    <a class = "btn btn-outline-primary mb-3" href="#">B2</a> &nbsp;&nbsp;&nbsp;
-                                    <a class = "btn btn-outline-primary mb-3" href="#">B3</a> &nbsp;&nbsp;&nbsp;
-                                    <a class = "btn btn-outline-primary mb-3" href="#">B4</a> &nbsp;&nbsp;&nbsp;
-                                    
-                                    <br><br>
-
-
-                                    <a class = "btn btn-outline-primary mb-3" href="#">C1</a> &nbsp;&nbsp;&nbsp;
-                                    <a class = "btn btn-outline-primary mb-3" href="#">C2</a> &nbsp;&nbsp;&nbsp;
-                                    <a class = "btn btn-outline-primary mb-3" href="#">C3</a> &nbsp;&nbsp;&nbsp;
-                                    <a class = "btn btn-outline-primary mb-3" href="#">C4</a> &nbsp;&nbsp;&nbsp;
-                                    
      
-                                    <br><br>
-                                    <a class = "btn btn-outline-primary mb-3" href="#">D1</a> &nbsp;&nbsp;&nbsp;
-                                    <a class = "btn btn-outline-primary mb-3" href="#">D2</a> &nbsp;&nbsp;&nbsp;
-                                    <a class = "btn btn-outline-primary mb-3" href="#">D3</a> &nbsp;&nbsp;&nbsp;
-                                    <a class = "btn btn-outline-primary mb-3" href="#">D4</a> &nbsp;&nbsp;&nbsp;
-                                    <br><br>
-                                    <a class = "btn btn-outline-primary mb-3" href="#">E1</a> &nbsp;&nbsp;&nbsp;
-                                    <a class = "btn btn-outline-primary mb-3" href="#">E2</a> &nbsp;&nbsp;&nbsp;
-                                    <a class = "btn btn-outline-primary mb-3" href="#">E3</a> &nbsp;&nbsp;&nbsp;
-                                    <a class = "btn btn-outline-primary mb-3" href="#">E4</a> &nbsp;&nbsp;&nbsp;
-                              
+
+      </div>
 
 
-
+  </div>
      </div>
 
 
