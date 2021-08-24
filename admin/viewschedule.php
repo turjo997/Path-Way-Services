@@ -34,6 +34,7 @@ if (isset($_GET['edit'])) {
 
 <link rel="stylesheet" type="text/css" href="editstyle.css">
 	<title>admin</title>
+    <link rel = "shortcut icon" type="image" href="images/logo1.png"/>
 
  
  
@@ -88,8 +89,11 @@ if (isset($_GET['edit'])) {
 			<th>Id</th>
             <th>Route</th>
             <th>seat</th>
+            <th>Sold Seat</th>
+            <th>Available Seat</th>
             <th>Date</th>
             <th>Time</th>
+            
             
             
 			<th colspan="2">Action</th>
@@ -101,6 +105,9 @@ if (isset($_GET['edit'])) {
 			<td><?php echo $row['id']; ?></td>
             <td><?php echo $row['route']; ?></td>
             <td><?php echo $row['seat']; ?></td>
+            <td><?php echo $row['sold_seat']; ?></td>
+            <td><?php echo $row['available_seat']; ?></td>
+            
             <td><?php echo $row['date']; ?></td>
             <td><?php echo $row['time']; ?></td>
 			
@@ -141,7 +148,7 @@ if (isset($_GET['edit'])) {
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 			
-		
+    <br><br><br><br><br><br>
 <?php
    require_once 'footer.php';
 ?>
