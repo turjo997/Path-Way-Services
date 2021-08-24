@@ -42,7 +42,7 @@
      <head>
 	 
 	        <title>admin</title>
-	        <link rel = "shortcut icon" type="image" href="images/bookLogo.png"/>	
+	        <link rel = "shortcut icon" type="image" href="images/logo1.png"/>	
 			
             <link rel = "stylesheet" href="style.css"/>	   
         	   
