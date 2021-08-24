@@ -10,7 +10,7 @@
      <head>
 	 
 	        <title>admin</title>
-	        <link rel = "shortcut icon" type="image" href="images/bookLogo.png"/>	
+            <link rel = "shortcut icon" type="image" href="images/logo1.png"/>
 			
          
             
@@ -47,6 +47,8 @@
 
 <section>
 <div class="row">
+
+
                                       
     <div class="col-lg-3 d-block d-lg-flex">
                      
@@ -57,7 +59,7 @@
            <div class="card-body">
                      
                 <h4 class="card-title">Total Bus</h4>
-                <a style = "width:100%" class= "btn btn-primary card-link stretched-link" target="_blank" href="registeredUsers.php">View Total Bus</a>
+                <a style = "width:100%" class= "btn btn-primary card-link stretched-link" target="_blank" href="viewschedule.php">View Total Bus</a>
           </div>
                                                     
                                              
@@ -68,32 +70,18 @@
                      
       <div class="card  width: 18rem text-center">
                                                                 
-           <img  class = 'card-img-top' src="images/seat.jpg" alt="card-image"height="200">
+           <img  class = 'card-img-top' src="images/enquiry.jpg" alt="card-image"height="200">
                                    
                <div class="card-body">
                                    
-                   <h4 class="card-title">Total Seats</h4>
-                    <a style = "width:100%" class= "btn btn-primary card-link stretched-link" target="_blank" href="manageBooks.php">View Total Seats</a>
+                   <h4 class="card-title">Queries</h4>
+                    <a style = "width:100%" class= "btn btn-primary card-link stretched-link" target="_blank" href="contactQuery.php">View Contact Queries</a>
                </div>
                                                                                                                     
       </div>
    </div>
 
-   <div class="col-lg-3 d-block d-lg-flex">
-                     
-      <div class="card  width: 18rem text-center">
-                                                                               
-          <img style="width: 270px" class = 'card-img-top' src="images/sold.png" alt="card-image" height="200" >
-                                                  
-               <div class="card-body">
-                                                  
-                   <h4 class="card-title">Total Sold</h4>
-                   <a style = "width:100%" class= "btn btn-primary card-link stretched-link" target="_blank" href="orders.php">View Total Sold</a>
-              </div>
-                                                                                                                                   
-        </div>
-           
-      </div>
+ 
 
       <div class="col-lg-3 d-block d-lg-flex">
                      
@@ -104,7 +92,7 @@
                               <div class="card-body">
                                                                  
                                   <h4 class="card-title">Total Pending</h4>
-                                  <a style = "width:100%" class= "btn btn-primary card-link stretched-link" target="_blank" href="orders.php">View Total Pending</a>
+                                  <a style = "width:100%" class= "btn btn-primary card-link stretched-link" target="_blank" href="pending.php">View Total Pending</a>
                              </div>
                                                                                                                                                   
                        </div>
@@ -121,8 +109,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 			
 		
-	 </body>
 
-
-
-</html> 
+<?php
+   require_once 'footer.php';
+?>
