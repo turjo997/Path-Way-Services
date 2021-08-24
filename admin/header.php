@@ -4,7 +4,7 @@
      <head>
 	 
 	        <title>admin</title>
-	        <link rel = "shortcut icon" type="image" href="images/bookLogo.png"/>	
+	        <link rel = "shortcut icon" type="image" href="images/logo1.png"/>	
 			
          
           <link rel = "stylesheet" href="profile.css"/>	
@@ -34,7 +34,10 @@
 	
 	 <body>
 
-  
+      
+              
+
+                
                      <?php
                      session_start();
                      
@@ -44,6 +47,7 @@
                           
                          <nav class="navbar navbar-expand-md">
                             <li class="nav-item active">
+                            <img src="images/logo.png" alt="logo">  
                             <a class="nav-link text-center text-md-left" href="login.php">Login</a>
                             </li>
                      
@@ -61,14 +65,14 @@
                             Side Menu
                          </div>
                          <ul>
-                            <li class="active"><a href="#">Dashboard</a></li>
+                            <li class="active"><a href="dashboard.php">Dashboard</a></li>
                             <li>
                                <a href="#" class="feat-btn">Manage Route
                                <span class="fas fa-caret-down first"></span>
                                </a>
                                <ul class="feat-show">
-                                  <li><a href="#">Add new Route</a></li>
-                                  <li><a href="#">Edit Route</a></li>
+                                  <li><a href="newroute.php">Add new Route</a></li>
+                                  <li><a href="editroute.php">Edit Route</a></li>
                                </ul>
                             </li>
                             <li>
@@ -76,13 +80,14 @@
                                <span class="fas fa-caret-down second"></span>
                                </a>
                                <ul class="serv-show">
-                                  <li><a href="#">Add new bus schedule</a></li>
-                                  <li><a href="#">View bus schedule</a></li>
-                                  <li><a href="#">Booking</a></li>
+                                  <li><a href="newbus.php">Add new bus schedule</a></li>
+                                  <li><a href="viewschedule.php">View bus schedule</a></li>
+                                  <li><a href="addseat.php">Add Seat Info</a></li>
+                                  <li><a href="booking.php">Booking</a></li>
                                </ul>
                             </li>
-                            <li><a href="#">Bus Ticket Info</a></li>
-                            <li><a href="#">Pending Tickets</a></li>
+                            
+                            <li><a href="pending.php">Pending Tickets</a></li>
                             
                            <li><a href="logout.php">Logout</a></li>
                          </ul>
