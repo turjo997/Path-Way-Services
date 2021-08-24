@@ -15,6 +15,7 @@ include('server1.php');
 
 <link rel="stylesheet" type="text/css" href="editstyle.css">
 	<title>admin</title>
+    <link rel = "shortcut icon" type="image" href="images/logo1.png"/>
 
  
  
@@ -98,7 +99,7 @@ $results1 = mysqli_query($db, "SELECT * FROM bus_sch");
 		
 			<td>
             <a href="seatview.php?seat_view=<?php echo $row['id']; ?>" class="edit_btn">Book Seat</a> &nbsp;&nbsp;
-				<a href="server1.php?del=<?php echo $row['id']; ?>" class="del_btn">Turn OF</a>
+				
 			</td>
 		</tr>
 	<?php } ?>
