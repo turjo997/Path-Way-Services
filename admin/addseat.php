@@ -1,6 +1,7 @@
 <?php
    require_once '../config.php';
    
+   $seat_cost = 0;
    $cnt_seat=$busid=$seat = $route =$date=$time=$status="";
    $seat_err=$busid_err  =$date_err=$time_err =$error ="";
    
@@ -21,6 +22,7 @@
    
       while($row = mysqli_fetch_assoc($result5)){
           $cnt_seat = $row['seat'];
+          $seat_cost = $row['seat_cost'];
       } 
       if($total_seat == $cnt_seat){
        $error= "All seats are filed";
@@ -33,7 +35,7 @@
     $seat = check_input($_POST['seat']);
 
 
-    $seatquery = "select * from seat_info where seat_name ='$seat'";
+    $seatquery = "select * from seat_info where bus_id = '$busid' && seat_name ='$seat'";
     $query = mysqli_query($link , $seatquery);
   
     $seatcount = mysqli_num_rows($query);
@@ -44,7 +46,7 @@
             
     if(empty($busid_err) && empty($seat_err) && empty($error)){
      
-      $sql = "INSERT INTO  seat_info (bus_id,seat_name,available_seat) values('$busid','$seat','$cnt_seat')";
+      $sql = "INSERT INTO  seat_info (bus_id,seat_name,available_seat,seat_cost) values('$busid','$seat','$cnt_seat','$seat_cost')";
        
        if (!$link) {
         die("Connection failed: " . mysqli_connect_error());
@@ -202,7 +204,7 @@
 
 
 </html> 
-
+<br><br><br><br><br><br>
 
 <?php
    require_once 'footer.php';
