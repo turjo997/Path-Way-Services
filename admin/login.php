@@ -96,16 +96,11 @@
  
    </div>
 
-   
-  
-   <br><br>
-
    <div class="form-group">
-   <input type="submit" style = "width:100%"  name="submit" id ="submitbtn" class="form-control btn btn-success" value="Login"> 
-   </div>
 
+   <input type="submit" name="submit" id ="submitbtn1" class="form-control btn-success" value="Login"> 
+</div>
 
-  
 
  </form>
    
